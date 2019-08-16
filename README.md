@@ -8,7 +8,7 @@
 <!-- vim-markdown-toc -->
 ### DrawCall
 * DrawCall就是CPU调用图形编程接口，比如DirectX或OpenGL，来命令GPU进行渲染的操作。例如，DirectX中的DrawIndexedPrimitive命令，OpenGL中glDrawElement命令
-  ** 1. CPU和GPU并行工作的原理为了CPU和GPU可以并行工作，就需要一个命令缓冲区(Command Buffer)命令缓冲区包含了一个命令队列，由CPU向其中添加命令，而由GPU从中读取命令。
+   ** 1. CPU和GPU并行工作的原理为了CPU和GPU可以并行工作，就需要一个命令缓冲区(Command Buffer)命令缓冲区包含了一个命令队列，由CPU向其中添加命令，而由GPU从中读取命令。
   ** 添加和读取的过程是相互独立的，因此命令缓冲区可以使CPU和GPU相互独立工作。
   ** 当CPU需要渲染一些对象时，它可以向命令缓冲区添加命令，而GPU完成了上一次的渲染任务后，它就可以从命令队列里取出一个命令并执行它。
   ** 命令缓冲区中的命令有很多种类，而Draw Call是其中的一种，其它命令还有改变渲染状态等命令（改变使用的Shader，使用不同的纹理等）。
