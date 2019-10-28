@@ -3,8 +3,8 @@
 ## Content
 <!-- vim-markdown-toc GFM -->
 * [1. 两数之和](#TwoSum)
-* [2. 整数反转](#ReverseInteger)
-* [3.](#3.)
+* [7. 整数反转](#ReverseInteger)
+* [9. 回文数](#PalindromeNumber)
 * [4.](#4.)
 <!-- vim-markdown-toc -->
 
@@ -60,6 +60,31 @@
              }
              return result;
           }
+      };
+      ```
+      
+## PalindromeNumber
+* 判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数
+  * 本题多种解法，可通过额外空间复杂度构建数组或者字符串判断回文，避免溢出
+  * 其实溢出也无妨，可得出正确结果，但在LeetCode会报错，加个容错
+    * code:
+      ```cpp
+      class Solution {
+      public:
+          bool isPalindrome(int x) {
+             bool isPalind = false;
+             if (x < 0)
+                 return isPalind;
+		           int y = 0;
+		           int initial = x;
+		           while (x > 0)
+		           {
+			              int temp = x % 10;
+			              y = 10 * y + temp;
+			              x /= 10;
+		           }
+		           return (initial == y) ? true : false;
+	         }
       };
       ```
 
