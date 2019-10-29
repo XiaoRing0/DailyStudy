@@ -84,7 +84,7 @@
 				x /= 10;
 			}
 			return (initial == y) ? true : false;
-		}
+		    }
 		};
       ```
 
