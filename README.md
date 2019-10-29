@@ -75,16 +75,16 @@
              bool isPalind = false;
              if (x < 0)
                  return isPalind;
-		           int y = 0;
-		           int initial = x;
-		           while (x > 0)
-		           {
-			              int temp = x % 10;
-			              y = 10 * y + temp;
-			              x /= 10;
-		           }
-		           return (initial == y) ? true : false;
-	         }
+	     int y = 0;
+	     int initial = x;
+	     while (x > 0)
+	     {
+		 int temp = x % 10;
+	         y = 10 * y + temp;
+		 x /= 10;
+	     }
+	     return (initial == y) ? true : false;
+	 }
       };
       ```
 
