@@ -71,7 +71,8 @@
       ```cpp
       class Solution {
       public:
-          bool isPalindrome(int x) {
+          bool isPalindrome(int x) 
+	  {
              bool isPalind = false;
              if (x < 0)
                  return isPalind;
@@ -84,7 +85,7 @@
 		 x /= 10;
 	     }
 	     return (initial == y) ? true : false;
-	}
+	  }
       };
       ```
 
