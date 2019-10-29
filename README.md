@@ -69,23 +69,22 @@
   * 其实溢出也无妨，可得出正确结果，但在LeetCode会报错，加个容错
     * code:
       ```cpp
-      class Solution {
-      public:
-          bool isPalindrome(int x) 
-	  {
-             bool isPalind = false;
-             if (x < 0)
-                 return isPalind;
-	     int y = 0;
-	     int initial = x;
-	     while (x > 0)
-	     {
-		 int temp = x % 10;
-	         y = 10 * y + temp;
-		 x /= 10;
-	     }
-	     return (initial == y) ? true : false;
-	  }
-      };
+		class Solution {
+		public:
+			bool isPalindrome(int x) {
+			bool isPalind = false;
+			if (x < 0)
+				return isPalind;
+			int y = 0;
+			int initial = x;
+			while (x > 0)
+			{
+				int temp = x % 10;
+				y = 10 * y + temp;
+				x /= 10;
+			}
+			return (initial == y) ? true : false;
+		}
+		};
       ```
 
